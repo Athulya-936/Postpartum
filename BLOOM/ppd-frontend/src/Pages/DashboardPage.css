@@ -1,0 +1,78 @@
+/* Stat cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.stat-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.stat-card:hover { border-color: var(--border2); transform: translateY(-2px); }
+.stat-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.stat-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2px; }
+.stat-value { font-size: 1.8rem; font-weight: 700; line-height: 1; font-family: 'Crimson Text', serif; }
+.stat-change { font-size: 0.75rem; margin-top: 4px; }
+
+/* Two-col layout */
+.two-col { display: grid; grid-template-columns: 1fr 1.3fr; gap: 1rem; }
+
+/* Mini bar chart */
+.mini-chart {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  height: 90px;
+  padding-bottom: 0.25rem;
+}
+.bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.bar-fill {
+  width: 100%;
+  background: linear-gradient(to top, var(--rose), var(--lavender));
+  border-radius: 6px 6px 0 0;
+  opacity: 0.7;
+  transition: height 0.8s;
+}
+.bar-day { font-size: 0.65rem; color: var(--muted); }
+
+/* Mood distribution bars */
+.mood-bar-wrap { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem; }
+.mood-row      { display: flex; align-items: center; gap: 0.75rem; font-size: 0.8rem; }
+.mood-label    { width: 60px; color: var(--dim); flex-shrink: 0; }
+.mood-bar-bg   { flex: 1; height: 8px; background: rgba(255,255,255,0.06); border-radius: 100px; overflow: hidden; }
+.mood-bar-fill { height: 100%; border-radius: 100px; transition: width 1s cubic-bezier(0.4,0,0.2,1); }
+.mood-pct      { width: 35px; text-align: right; color: var(--muted); }
+
+/* Activity list */
+.activity-list { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem; }
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg3);
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+.activity-dot  { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.activity-text { flex: 1; color: var(--dim); }
+.activity-time { color: var(--muted); font-size: 0.72rem; }
