@@ -13,16 +13,16 @@
 - Member 2: Aswathy M Sunilkumar - Vidya Academy of Science & Technology
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://drive.google.com/drive/u/0/folders/1c91vn_TjAQrOtT6jREq8M-hwQIJcB_QW
 
 ### Project Description
 [2-3 lines about what your project does]
 
 ### The Problem statement
-Postpartum Depression
+Let’s start with the reality. The postpartum period is one of the most vulnerable times in a person's life. Statistics show that 1 in 7 women experience postpartum depression, and countless others struggle with physical recovery. Yet, the current digital landscape fails them. Mothers are forced to juggle multiple apps—one for tracking baby feeds, another for meditation, and a calendar for appointments. This fragmentation creates 'app fatigue' for an already exhausted user.
 
 ### The Solution
-[How are you solving it?]
+We offer an integrated 'All-in-One' ecosystem. We bridge the gap between physical recovery, mental health, baby care, and medical appointments in a single platform. But BLOOM is more than just a digital diary; it is proactive and intelligent. While other apps passively store data, BLOOM analyzes it. We feature an Automated Warning System—if a user logs a high pain score or a worrying depression indicator, the system immediately flags it and prompts professional intervention. We don't just help you track the baby; we help the mother heal.
 
 ---
 
@@ -36,12 +36,6 @@ Postpartum Depression
 - Libraries used: Express.js, MongoDB+Mongoose, JWT+bcryptjs, React + React Router, Axios
 - Tools used:  VS Code
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
-
----
 
 ## Features
 
@@ -60,23 +54,14 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+Installation commands - npm install
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+Run commands - npm start
 ```
 
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
-
----
 
 ## Project Documentation
 
@@ -84,24 +69,46 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
 *Login Page*
 <img width="1920" height="1080" alt="Screenshot (2)" src="https://github.com/user-attachments/assets/0c19094c-4a66-47ec-b48e-0a18c252606f" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
+
 *Dashboard*
 <img width="1920" height="1080" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/64ff722c-3b7a-4992-b006-7ad59fdd5e12" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
 *Partner View*
 <img width="1920" height="1080" alt="Screenshot (4)" src="https://github.com/user-attachments/assets/27fc01c2-4d39-46ca-8c0d-2f3d67844023" />
 
 #### Diagrams
 
 **System Architecture:**
+<img width="1919" height="270" alt="Screenshot 2026-02-28 100510" src="https://github.com/user-attachments/assets/185b1fad-4381-4c43-9538-c73a0f42b53d" />
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+1. Architecture Model
+BLOOM follows a Three-Tier Client-Server Architecture, ensuring separation of concerns:
+
+Presentation Tier: React.js Frontend (User Interface).
+Application Tier: Node.js/Express.js Backend (Business Logic).
+Data Tier: MongoDB Atlas (Database Storage).
+2. Key Components
+
+Frontend (React): Manages UI, state, and routing. It consumes the API using HTTP clients (Axios/Fetch) to send/receive JSON data.
+Backend (Node/Express): Acts as the "brain." It handles routing, middleware (authentication), and logic processing. Mongoose ODM is used to interact with the database.
+Database (MongoDB): A NoSQL database storing data as Documents in Collections (e.g., users, healthrecords). It offers flexibility for varied health data structures.
+3. Tech Stack Interactions
+
+Communication: Frontend and Backend communicate via HTTPS using JSON payloads.
+Security: Uses JWT (JSON Web Token) for stateless authentication. The frontend sends a token with every request; the backend verifies it before granting access.
+Data Access: Node.js uses Mongoose schemas to enforce structure and simplify database queries without complex SQL.
+4. Data Flow (Example: Logging Health)
+
+Action: User submits health form on Frontend.
+Request: Frontend sends a POST request with data + JWT token.
+Verification: Backend Middleware validates the JWT.
+Processing: Controller executes business logic (e.g., checkWarnings()) to flag risks.
+Storage: Data is saved to MongoDB via Mongoose.
+Response: Success status and results are returned to the Frontend.
+
 
 **Application Workflow:**
 
@@ -110,15 +117,7 @@ List the key features of your project:
 
 ---
 
-### For Hardware:
 
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 #### Build Photos
 
