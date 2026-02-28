@@ -16,7 +16,7 @@
 https://drive.google.com/drive/u/0/folders/1c91vn_TjAQrOtT6jREq8M-hwQIJcB_QW
 
 ### Project Description
-[2-3 lines about what your project does]
+BLOOM is a digital companion for new mothers. While most apps focus on the baby, BLOOM focuses on the mother's recovery. It tracks her physical healing and mental health, while also managing baby care and doctor appointments. The system features a proactive warning engine that alerts users to potential health risks, bridging the gap between a mother's daily experience and professional healthcare support.
 
 ### The Problem statement
 Let’s start with the reality. The postpartum period is one of the most vulnerable times in a person's life. Statistics show that 1 in 7 women experience postpartum depression, and countless others struggle with physical recovery. Yet, the current digital landscape fails them. Mothers are forced to juggle multiple apps—one for tracking baby feeds, another for meditation, and a calendar for appointments. This fragmentation creates 'app fatigue' for an already exhausted user.
@@ -142,12 +142,13 @@ Response: Success status and results are returned to the Frontend.
 
 #### API Documentation
 
-**Base URL:** `https://api.yourproject.com`
+**Base URL:**Frontend:  http://localhost:3000
+Backend:   http://localhost:5000*
 
 ##### Endpoints
 
 **GET /api/endpoint**
-- **Description:** [What it does]
+- **Description:** It takes requests, processes them securely in the logic, and fetches/stores data in the pantry.
 - **Parameters:**
   - `param1` (string): [Description]
   - `param2` (integer): [Description]
@@ -180,12 +181,7 @@ Response: Success status and results are returned to the Frontend.
 
 ---
 
-### For Mobile Apps:
 
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
 
 #### Installation Guide
 
@@ -379,12 +375,12 @@ python script.py -v --format json data.json
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+**Tool Used:**  GitHub Copilot, z.ai, ChatGPT, Claude
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+**Purpose:** 
+
+ Debugging assistance for async functions
+
 
 **Key Prompts Used:**
 - "Create a REST API endpoint for user authentication"
@@ -404,10 +400,9 @@ If you used AI tools during development, document them here for transparency:
 ---
 
 ## Team Contributions
-
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+Aswathy m sunilkumar: Frontend development
+Athulya km: Backend development,version control
+- 
 
 ---
 
